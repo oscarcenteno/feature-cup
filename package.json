@@ -1,0 +1,30 @@
+{
+  "name": "feature-cup",
+  "version": "1.0.0",
+  "description": "Create feature coverage reports for your test automation system.",
+  "main": "cli.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "mocha --recursive --reporter spec --timeout 10000 --exit",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "path": "^0.12.7",
+    "table": "^6.8.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.3.2",
+    "chai": "^4.3.7",
+    "eslint": "^8.43.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  },
+  "bin":{
+    "feature-cup": "./cli.js"
+  }
+}

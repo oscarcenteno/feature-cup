@@ -1,0 +1,253 @@
+
+    <html>
+      <head>
+        <title>feature-cup - Feature Coverage Report</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+          }
+          h1 {
+            color: #0066cc;
+            margin-bottom: 20px;
+          }
+          h2 {
+            margin-top: 30px;
+          }
+          #chart-container {
+            margin-bottom: 20px;
+          }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+          }
+          th {
+            background-color: #f2f2f2;
+          }
+          .covered {
+            background-color: #c8e6c9;
+          }
+          .uncovered {
+            background-color: #ffcdd2;
+          }
+          footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            text-align: center;
+            color: #888888;
+          }
+          .footer_copyright {
+            color: var(--light);
+          }
+        </style>
+      </head>
+      <body>
+      
+        <h1>feature-cup</h1>
+        <h2>Feature Coverage Report</h2>
+        <div id="chart-container">
+          <canvas id="chart"></canvas>
+        </div>
+        <table>
+          <tr>
+            <th>Module</th>
+            <th>Feature</th>
+            <th>Covered</th>
+          </tr>
+          
+                <tr>
+                  <td>Module A</td>
+                  <td>Feature 1</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 2</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 3</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td>Module B</td>
+                  <td>Feature 4</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 5</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 6</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td>Module C</td>
+                  <td>Feature X</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td>Module D</td>
+                  <td>Feature 8</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 9</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 10</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td>Module E</td>
+                  <td>Feature 11</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 12</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 13</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 14</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 15</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+                <tr>
+                  <td>Module F</td>
+                  <td>Feature 20</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 21</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 22</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 23</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 24</td>
+                  <td class="covered">Yes</td>
+                </tr>
+              
+                <tr>
+                  <td></td>
+                  <td>Feature 25</td>
+                  <td class="uncovered">No</td>
+                </tr>
+              
+        </table>
+
+        <footer style="text-align: center; margin-top: 20px;">
+          Report created today at 5:05 PM<br>
+        </footer>
+
+        <script>
+          const modules = ["Module A","Module B","Module C","Module D","Module E","Module F"];
+          const coveredCounts = [2,3,0,0,0,5];
+          const uncoveredCounts = [1,0,1,3,5,1];
+
+          const ctx = document.getElementById('chart').getContext('2d');
+          new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: modules,
+          datasets: [
+            {
+              label: 'Covered',
+              data: coveredCounts,
+              backgroundColor: '#c8e6c9'
+            },
+            {
+              label: 'Uncovered',
+              data: uncoveredCounts,
+              backgroundColor: '#ffcdd2'
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          scales: {
+            x: {
+              beginAtZero: true,
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Modules'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Count'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          }
+        }
+      });
+    </script>
+
+  </body>
+</html>

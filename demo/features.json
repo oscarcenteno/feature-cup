@@ -1,0 +1,121 @@
+{
+  "system": {
+    "name": "My System",
+    "modules": [
+      {
+        "name": "Module A",
+        "features": [
+          {
+            "name": "Feature 1",
+            "description": "This is feature 1 of module A"
+          },
+          {
+            "name": "Feature 2",
+            "description": "This is feature 2 of module A"
+          },
+          {
+            "name": "Feature 3",
+            "description": "This is feature 3 of module A"
+          }
+        ]
+      },
+      {
+        "name": "Module B",
+        "features": [
+          {
+            "name": "Feature 4",
+            "description": "This is feature 4 of module B"
+          },
+          {
+            "name": "Feature 5",
+            "description": "This is feature 5 of module B"
+          },
+          {
+            "name": "Feature 6",
+            "description": "This is feature 6 of module B"
+          }
+        ]
+      },
+      {
+        "name": "Module C",
+        "features": [
+          {
+            "name": "Feature X",
+            "description": "This is feature of module C"
+          }
+        ]
+      },
+      {
+        "name": "Module D",
+        "features": [
+          {
+            "name": "Feature 8",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 9",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 10",
+            "description": "This is feature of module D"
+          }
+        ]
+      },
+      {
+        "name": "Module E",
+        "features": [
+          {
+            "name": "Feature 11",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 12",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 13",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 14",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 15",
+            "description": "This is feature of module D"
+          }
+        ]
+      },
+      {
+        "name": "Module F",
+        "features": [
+          {
+            "name": "Feature 20",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 21",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 22",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 23",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 24",
+            "description": "This is feature of module D"
+          },
+          {
+            "name": "Feature 25",
+            "description": "This is feature of module D"
+          }
+        ]
+      }
+    ]
+  }
+}
