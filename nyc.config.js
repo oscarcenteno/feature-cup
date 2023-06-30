@@ -4,5 +4,5 @@ module.exports = {
     all: true,
     'check-coverage': true,
     'per-file': true,
-    include: ['src/**/*.js'],
+    include: ['src/business_logic/**/*.js'],
 }

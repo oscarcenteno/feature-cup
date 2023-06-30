@@ -38,3 +38,8 @@ jobs:
           name: Test run report            # Name of the check run which will be created
           path: mocha-test-results.json    # Path to test results
           reporter: mocha-json      # Format of test results
+
+      - name: Report code coverage to coveralls.io
+        run: npm run ci:coverage
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
