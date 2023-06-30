@@ -1,7 +1,7 @@
 {
   "name": "feature-cup",
-  "version": "0.0.1",
-  "description": "Create feature coverage reports for your Node.js test automation system.",
+  "version": "1.0.0",
+  "description": "Share how your node.js test automation system covers the features of your application.",
   "main": "cli.js",
   "scripts": {
     "lint": "eslint ./src",

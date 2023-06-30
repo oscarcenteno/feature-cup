@@ -78,7 +78,6 @@ In the demo folder, we have the following test files:
       └──module_f.spec.js // all "describe" blocks in files will be matched to the features in the features.json file
 ```
 
-
 ### Output
 
 The output is specified using the --output option. The output can be "console" or "html". 
@@ -101,7 +100,7 @@ feature-cup --features ./demo/features.json --tests "./demo/specs/**/*.spec.js" 
 
 will output to the console as:
 
-![Alt text](demo/reports/console.png)
+![Alt text](https://github.com/oscarcenteno/feature-cup/blob/main/demo/reports/console.png?raw=true)
 
 ```bash
 # Output report to html file
@@ -110,7 +109,7 @@ node cli.js --features ./demo/features.json --tests "./demo/specs/**/*.spec.js" 
 
 will output as an html report at demo/reports/feature-coverage.html:
 
-![Alt text](demo/reports/html.png)
+![Alt text](https://github.com/oscarcenteno/feature-cup/blob/main/demo/reports/html.png?raw=true))
 
 ## Development
 
@@ -128,22 +127,28 @@ Business and presentation logic are covered by unit tests.
 npm test
 ```
 
-### Run linter
+### Linting
 
 ```bash
 npm run lint
 ```
 
-### Run code coverage
-
+### Get code coverage report
 
 ```bash
 npm run coverage
 ```
 
+Coverage information is reported to coveralls.io and can be found at [https://coveralls.io/github/oscarcenteno/feature-cup](https://coveralls.io/github/oscarcenteno/feature-cup).
+
+```bash
+# Command used by github actions to report coverage on each commit to main branch, see .github/workflows/nodejs.yml
+npm run ci:coverage
+```
+
 ## Contributors
 
-* [Oscar Centeno] (Please report your pull request for revieing bugs or suggestions)
+* [Oscar Centeno] (https://github.com/oscarcenteno)
 
 ## License
 
