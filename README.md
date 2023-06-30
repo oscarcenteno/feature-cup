@@ -1,4 +1,5 @@
-# feature-cup
+# feature-cup [![Tests](https://github.com/oscarcenteno/feature-cup/actions/workflows/nodejs.yml/badge.svg)](https://github.com/oscarcenteno/feature-cup/actions/workflows/nodejs.yml) [![Coverage Status](https://coveralls.io/repos/github/oscarcenteno/feature-cup/badge.svg?branch=main)](https://coveralls.io/github/oscarcenteno/feature-cup?branch=main) [![npm version](https://badge.fury.io/js/feature-cup.svg)](https://badge.fury.io/js/feature-cup) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Create feature coverage reports for your test automation system. We are aware that reporting is a key component for test automation suites, however one important question that is usually not answered is "how much of your system is covered byt these tests?".
 
 **feature-cup** allows us to specify the functional structure of the system-under-test and then match the test automation code to the functional structure. The result is a feature coverage report that shows how much of our system is covered by those tests.

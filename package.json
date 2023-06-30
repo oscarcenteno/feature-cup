@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint ./src",
     "test": "mocha --recursive --reporter spec --timeout 10000 --exit",
+    "ci:test": "mocha --reporter json > mocha-test-results.json",
     "coverage": "nyc --reporter=lcov --reporter=text mocha"
   },
   "keywords": [],
@@ -24,7 +25,7 @@
     "mocha": "^10.2.0",
     "nyc": "^15.1.0"
   },
-  "bin":{
+  "bin": {
     "feature-cup": "./cli.js"
   }
 }
