@@ -8,7 +8,7 @@
     "test": "mocha --recursive --reporter spec --timeout 10000 --exit",
     "ci:test": "mocha --reporter json > mocha-test-results.json",
     "coverage": "nyc --reporter=lcov --reporter=text mocha",
-    "ci:coverage": "nyc report --reporter=text-lcov | coveralls"
+    "ci:coverage": "nyc --reporter=lcov --reporter=text mocha | coveralls"
   },
   "keywords": [],
   "author": "",
