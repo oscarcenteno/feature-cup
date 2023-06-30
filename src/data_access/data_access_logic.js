@@ -25,17 +25,6 @@ const parseTestSuiteNamesFromFiles = (pattern) => {
   return testSuiteNames;
 };
 
-function getAbsolutePathFromCaller(jsonFileName) {
-  try {
-    const path = require('path');
-    const appDir = path.dirname(require.main.filename);
-    return path.join(appDir, jsonFileName);
-  } catch (error) {
-    console.error(`Error getting absolute path for ${jsonFileName}`);
-    throw error;
-  }
-}
-
 function getFeaturesFromJsonSource(jsonFileName) {
   // raise error if file not found
   if (!fs.existsSync(jsonFileName)) {

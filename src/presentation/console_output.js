@@ -1,5 +1,6 @@
 const table = require('table');
 const { colorizeFeatureCoverageReport } = require('./console_presentation_logic.js');
+const printer = require('./printer.js');
 
 // Function to print the feature coverage report
 const printFeatureCoverageReport = (featureCoverageReport) => {
@@ -15,14 +16,13 @@ const printFeatureCoverageReport = (featureCoverageReport) => {
 
     // @ts-ignore
     const output = table.table(coloredReport, config);
-    // eslint-disable-next-line no-console
-    console.log(output);
+    printer.log(output);
 };
 
 const printNoCoverageReport = (noCoverageReport) => {
-    console.log('Test suites not associated with any expected feature:');
+    printer.log('Test suites not associated with any expected feature:');
     noCoverageReport.forEach(row => {
-        console.log(`- "${row}"`);
+        printer.log(`- "${row}"`);
     });
 };
 

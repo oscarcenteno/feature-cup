@@ -1,4 +1,5 @@
 const fs = require('fs');
+const printer = require('./printer');
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -301,7 +302,7 @@ const outputCoverageReportToHTML = (report, reportPath) => {
 
   const path = require('path');
 
-  const fullPath = reportPath + '/feature-coverage-report.html'
+  const fullPath = reportPath + '/feature-coverage-report.html';
   const directoryPath = path.dirname(fullPath);
   if (!fs.existsSync(directoryPath)) {
     fs.mkdirSync(directoryPath, { recursive: true });
@@ -309,7 +310,7 @@ const outputCoverageReportToHTML = (report, reportPath) => {
 
   fs.writeFileSync(fullPath, html);
 
-  console.log(`Coverage report written to ${fullPath}`);
+  printer.log(`Coverage report written to ${fullPath}`);
 };
 
 module.exports = {

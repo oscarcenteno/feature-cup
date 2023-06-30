@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const printer = require('./printer');
 
 function generateAsciiTree(directoryPath, prefix = '') {
     const files = fs.readdirSync(directoryPath);
@@ -27,7 +28,7 @@ function generateAsciiTree(directoryPath, prefix = '') {
 const directoryPath = './demo';
 const asciiTree = generateAsciiTree(directoryPath);
 
-console.log('ASCII representation of the folder structure:');
-console.log('');
-console.log(directoryPath);
-console.log(asciiTree);
+printer.log('ASCII representation of the folder structure:');
+printer.log('');
+printer.log(directoryPath);
+printer.log(asciiTree);

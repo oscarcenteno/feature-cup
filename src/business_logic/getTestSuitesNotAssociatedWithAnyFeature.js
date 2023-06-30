@@ -6,7 +6,7 @@ const getTestSuitesNotAssociatedWithAnyFeature = (json, testSuiteNames) => {
         const lowerFeatureName = featureName.trim().toLowerCase();
 
         const isCovered = json.system.modules.some((module) => {
-            ;
+
             if (module.name.trim().toLowerCase() === lowerModuleName) {
                 return module.features.some((feature) => feature.name.trim().toLowerCase() === lowerFeatureName);
             }

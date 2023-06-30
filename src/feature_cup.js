@@ -42,7 +42,7 @@ const generateHtmlFeatureCoverageReport = (pattern, jsonFileName, reportPath) =>
 
     // Presentation logic
     outputCoverageReportToHTML(report, reportPath);
-    
+
 };
 
 const runFeatureCup = ({ testsPattern, featuresJson, output, reportPath }) => {
@@ -57,7 +57,7 @@ const runFeatureCup = ({ testsPattern, featuresJson, output, reportPath }) => {
         console.error(`Unsupported output type: ${output}`);
         process.exit(1);
     }
-}
+};
 
 module.exports = {
     generateConsoleFeatureCoverageReport,
