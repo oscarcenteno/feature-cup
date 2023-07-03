@@ -1,10 +1,10 @@
 # feature-cup [![Tests](https://github.com/oscarcenteno/feature-cup/actions/workflows/nodejs.yml/badge.svg)](https://github.com/oscarcenteno/feature-cup/actions/workflows/nodejs.yml) [![Coverage Status](https://coveralls.io/repos/github/oscarcenteno/feature-cup/badge.svg?branch=main)](https://coveralls.io/github/oscarcenteno/feature-cup?branch=main) [![npm version](https://badge.fury.io/js/feature-cup.svg)](https://badge.fury.io/js/feature-cup) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Create feature coverage reports for your test automation system. We are aware that reporting is a key component for test automation suites, however one important question that is usually not answered is "how much of your system is covered byt these tests?".
+Create feature coverage reports for your test automation system. We are aware that reporting is a key component for test automation suites, however one important question that is usually not answered is "how much of your system is covered by these tests?" or "what features are not covered and we should verify manually?".
 
 **feature-cup** allows us to specify the functional structure of the system-under-test and then match the test automation code to the functional structure. The result is a feature coverage report that shows how much of our system is covered by those tests.
 
-Note that feature-cup does not require tests to be ran, as it does a static analysis of the test code.
+Note that feature-cup does not require tests to run, as it does a static analysis of the test code.
 
 ## Installation
 
@@ -146,11 +146,13 @@ Coverage information is reported to coveralls.io and can be found at [https://co
 npm run ci:coverage
 ```
 
-### Run demos for Development
+### End to End testing
+
+Here, make sure everything works together.
 
 ```bash
-npm run demo:console
-npm run demo:html
+npm run demo:console # check no errors are shown in the console
+npm run demo:html #check the report in the "reports" folder
 
 ```
 

@@ -2,15 +2,15 @@
   "name": "feature-cup",
   "version": "0.0.3",
   "description": "Share how your node.js test automation system covers the features of your application.",
-  "main": "cli.js",
+  "main": "bin/cli.js",
   "scripts": {
     "lint": "eslint ./src",
     "test": "mocha --recursive --reporter spec --timeout 10000 --exit",
     "ci:test": "mocha --reporter json > mocha-test-results.json",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov",
     "ci:coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "demo:console": "node cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output console",
-    "demo:html": "node cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output html"
+    "demo:console": "node bin/cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output console",
+    "demo:html": "node bin/cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output html"
   },
   "keywords": [],
   "author": "",
@@ -22,15 +22,15 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
-    "@types/node": "^20.3.2",
+    "@types/node": "^20.3.3",
     "chai": "^4.3.7",
     "coveralls": "^3.1.1",
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0"
   },
   "bin": {
-    "feature-cup": "./cli.js"
+    "feature-cup": "./bin/cli.js"
   }
 }

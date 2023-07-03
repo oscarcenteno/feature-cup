@@ -4,9 +4,17 @@ const { program } = require('commander');
 const path = require('path');
 
 // Import your feature-cup logic here
-const { runFeatureCup } = require('./src/feature_cup.js');
+const { runFeatureCup } = require('../src/feature_cup.js');
+
+const packageJson = require('../package.json');
+const name = packageJson.name;
+const description = packageJson.description;
+const version = packageJson.version;
 
 program
+    .name(name)
+    .description(description)
+    .version(version)
     .option('-f, --features [file]', 'Path to the features JSON file', './features.json')
     .option('-t, --tests [glob]', 'Glob pattern for test files', './specs/**/*.spec.js')
     .option('-o, --output [type]', 'Output type: console, file, etc.', 'console')
