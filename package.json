@@ -1,6 +1,6 @@
 {
   "name": "feature-cup",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Share how your node.js test automation system covers the features of your application.",
   "main": "bin/cli.js",
   "scripts": {

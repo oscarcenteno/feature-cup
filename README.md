@@ -91,20 +91,18 @@ If the output is "html", then the --report option may be specified. The report o
 
 ## Examples
 
-Find the source of examples in the "demo" folder.
+Find the source of examples in the repo: https://github.com/oscarcenteno/feature-cup-example
 
 ```bash
-# Output report to console
+# Sample output report to console
 feature-cup --features ./demo/features.json --tests "./demo/specs/**/*.spec.js" --output console
 ```
-
-will output to the console as:
 
 ![Alt text](https://github.com/oscarcenteno/feature-cup/blob/main/demo/reports/console.png?raw=true)
 
 ```bash
-# Output report to html file
-node cli.js --features ./demo/features.json --tests "./demo/specs/**/*.spec.js" --output html --report feature-coverage
+# Sample output report to html file
+feature-cup --features ./demo/features.json --tests "./demo/specs/**/*.spec.js" --output html --report feature-coverage
 ```
 
 will output as an html report at demo/reports/feature-coverage.html:
