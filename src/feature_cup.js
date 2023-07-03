@@ -19,6 +19,7 @@ const { createFeatureCoverageReportWithModuleHierarchy } = require('./presentati
 const { printFeatureCoverageReport } = require('./presentation/console_output');
 const { printNoCoverageReport } = require('./presentation/console_output.js');
 const { outputCoverageReportToHTML } = require('./presentation/html_output.js');
+const printer = require('./presentation/printer');
 
 // Function to generate and print the feature coverage report
 const generateConsoleFeatureCoverageReport = (pattern, jsonFileName) => {
@@ -60,11 +61,16 @@ const runFeatureCup = ({ testsPattern, featuresJson, output, reportPath }) => {
 };
 
 module.exports = {
-    generateConsoleFeatureCoverageReport,
     runFeatureCup
 };
 function outputToConsole(report, json, testSuiteNames) {
     const modifiedReport = createFeatureCoverageReportWithModuleHierarchy(report);
+
+    printer.log('-----------------------------------');
+    printer.log(` ${json.system.name}`);
+    printer.log(' Feature coverage report');
+    printer.log('-----------------------------------');
+
     printFeatureCoverageReport(modifiedReport);
 
     const noCoverageReport = getTestSuitesNotAssociatedWithAnyFeature(json, testSuiteNames);

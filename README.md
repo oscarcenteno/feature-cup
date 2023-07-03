@@ -127,10 +127,11 @@ Business and presentation logic are covered by unit tests.
 npm test
 ```
 
-### Linting
+### Static code checking
 
 ```bash
-npm run lint
+npm run typecheck # check typescript types
+npm run lint # check code style
 ```
 
 ### Get code coverage report
