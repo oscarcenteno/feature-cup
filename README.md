@@ -146,6 +146,14 @@ Coverage information is reported to coveralls.io and can be found at [https://co
 npm run ci:coverage
 ```
 
+### Run demos for Development
+
+```bash
+npm run demo:console
+npm run demo:html
+
+```
+
 ## Contributors
 
 * [Oscar Centeno] (https://github.com/oscarcenteno)

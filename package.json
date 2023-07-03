@@ -1,6 +1,6 @@
 {
   "name": "feature-cup",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Share how your node.js test automation system covers the features of your application.",
   "main": "cli.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "test": "mocha --recursive --reporter spec --timeout 10000 --exit",
     "ci:test": "mocha --reporter json > mocha-test-results.json",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov",
-    "ci:coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "ci:coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "demo:console": "node cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output console",
+    "demo:html": "node cli.js --features ./demo/features.json --tests \"./demo/specs/**/*.spec.js\" --output html"
   },
   "keywords": [],
   "author": "",
